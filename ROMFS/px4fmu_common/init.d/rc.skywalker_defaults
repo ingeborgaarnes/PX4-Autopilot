@@ -9,37 +9,47 @@ set VEHICLE_TYPE fw
 
 param set-default MAV_TYPE 1
 
+#
+# Default parameters for fixed wing UAVs.
+#
 # there is a 2.5 factor applied on COM_POS_FS_EPH if for invalidation
 param set-default COM_POS_FS_EPH 50
+param set-default COM_VEL_FS_EVH 3
 
 param set-default COM_POS_LOW_EPH 50
 
-param set-default MIS_TAKEOFF_ALT 20
-param set-default MIS_YAW_TMT 10
+# Disable preflight disarm to not interfere with external launching
+param set-default COM_DISARM_PRFLT -1
 
 param set-default EKF2_ARSP_THR 10
 param set-default EKF2_FUSE_BETA 1
+param set-default EKF2_MAG_ACCLIM 0
+param set-default EKF2_REQ_EPH 10
+param set-default EKF2_REQ_EPV 10
+param set-default EKF2_REQ_HDRIFT 0.5
+param set-default EKF2_REQ_SACC 1
+param set-default EKF2_REQ_VDRIFT 1
+param set-default EKF2_RNG_QLTY_T 3
 
-param set-default HTE_VXY_THR 2
-
-param set-default MIS_TKO_LAND_REQ 2
-
-param set-default MPC_ACC_HOR_MAX 2
-param set-default MPC_VEL_MANUAL 5
-param set-default MPC_XY_ERR_MAX 5
-param set-default MPC_XY_VEL_MAX 8
-param set-default MPC_JERK_MAX 4.5
-param set-default MPC_YAW_MODE 4
-
-# reduce aggressiveness around roll and yaw axis,
-# as VTOLs usually have high intertia and lot af drag due to wings
-param set-default MC_ROLL_P 5
-param set-default MC_ROLLRATE_MAX 120
-param set-default MC_YAW_P 2
-param set-default MC_YAWRATE_MAX 120
-param set-default MPC_MAN_Y_MAX 90
 
 param set-default RTL_TYPE 1
+param set-default RTL_RETURN_ALT 100
+param set-default RTL_DESCEND_ALT 100
+param set-default RTL_LAND_DELAY -1
+
+#
+# FW uses L1 distance for acceptance radius.
+# Set a smaller NAV_ACC_RAD for vertical acceptance distance.
+#
+param set-default NAV_ACC_RAD 10
+
+param set-default MIS_TAKEOFF_ALT 25
+param set-default MIS_TKO_LAND_REQ 2
+
+#
+# FW takeoff acceleration can easily exceed ublox GPS 2G default.
+#
+param set-default GPS_UBX_DYNMODEL 8
 
 param set-default SYS_HAS_NUM_ASPD 1 # by default require an airspeed sensor
 
