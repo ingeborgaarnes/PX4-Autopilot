@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# @name Skywalker X8
+# @name Skywalker
 #
 # @type Fixedwing
 #
@@ -9,7 +9,7 @@
 
 PX4_SIMULATOR=${PX4_SIMULATOR:=gz}
 PX4_GZ_WORLD=${PX4_GZ_WORLD:=default}
-PX4_SIM_MODEL=${PX4_SIM_MODEL:=standard_vtol}
+PX4_SIM_MODEL=${PX4_SIM_MODEL:=skywalker_x8}
 
 param set-default SIM_GZ_EN 1
 
