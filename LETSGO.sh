@@ -4,6 +4,9 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
+echo "Run program..."
+make px4_sitl
+
 echo "Deinitializing the submodule..."
 git submodule deinit Tools/simulation/gz
 
@@ -34,9 +37,4 @@ git submodule status
 echo "Run program..."
 make px4_sitl
 
-echo "Let's try again..."
-git submodule update --init --recursive
-
-echo "Run program..."
-make px4_sitl
 
