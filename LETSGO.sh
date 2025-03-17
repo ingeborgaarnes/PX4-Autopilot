@@ -34,3 +34,9 @@ git submodule status
 echo "Run program..."
 make px4_sitl
 
+echo "Let's try again..."
+git submodule update --init --recursive
+
+echo "Run program..."
+make px4_sitl
+
