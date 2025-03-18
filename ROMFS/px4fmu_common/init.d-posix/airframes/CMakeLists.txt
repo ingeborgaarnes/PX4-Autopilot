@@ -93,6 +93,7 @@ px4_add_romfs_files(
 	4020_gz_tiltrotor
 	4021_gz_x500_flow
 	4033_gz_skywalker_x8
+	4034_gz_skywalker_x8_new
 
 	6011_gazebo-classic_typhoon_h480
 	6011_gazebo-classic_typhoon_h480.post
