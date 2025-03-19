@@ -10,6 +10,12 @@ PX4_SIMULATOR=${PX4_SIMULATOR:=gz}
 PX4_GZ_WORLD=${PX4_GZ_WORLD:=default}
 PX4_SIM_MODEL=${PX4_SIM_MODEL:=skywalker_x8}
 
+param set-default LPE_LON 10.395948
+param set-default LPE_LAT 63.409023
+#param set-default SIM_GZ_HOME_LAT 63.409023
+#param set-default SIM_GZ_HOME_LON 10.395948
+#param set-default SIM_GZ_HOME_ALT 10
+
 param set-default SIM_GZ_EN 1
 
 param set-default SENS_EN_ARSPDSIM 1
@@ -17,7 +23,7 @@ param set-default SENS_EN_ARSPDSIM 1
 param set-default FW_LND_ANG 8
 
 # Enable fixed-wing auto-takeoff
-param set-default FW_THR_IDLE 0.15
+param set-default FW_THR_IDLE 0.4 #0.15
 
 # Motor failure detection (left as VTOL legacy – can be adjusted as needed)
 param set-default FD_ACT_EN 0
@@ -35,9 +41,9 @@ param set-default CA_ROTOR0_AZ 0
 param set-default CA_ROTOR0_PX 0.2
 
 # Only one motor (the tail rotor)
-param set-default SIM_GZ_EC_FUNC1 101
-param set-default SIM_GZ_EC_MIN1 0
-param set-default SIM_GZ_EC_MAX1 3500
+param set-default SIM_GZ_EC_FUNC5 101
+param set-default SIM_GZ_EC_MIN5 0
+param set-default SIM_GZ_EC_MAX5 3500
 
 param set-default SIM_GZ_SV_FUNC1 201
 param set-default SIM_GZ_SV_FUNC2 202
